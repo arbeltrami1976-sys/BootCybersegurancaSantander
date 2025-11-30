@@ -146,6 +146,20 @@ ftp>|
 
 TESTES DE ACESSO A FOMULARIOS WEB POR BRUTE FORCE.
 
+Realizado acesso ao portal 192.168.56.101/dvwa/login.php
+
+Inserido um nome de usuário qualquer.
+
+Acessado a ferramenta de modo de desenvolvedor para analise de POST e Request.
+
+Verificado na requisição do post os valores
+
+"username"
+
+"password"
+
+"login"
+
 (kaliadmin@kaliteste:~)
 
 $ medusa -h 192.168.56.101 -U users.txt -P pass.txt -M http \
