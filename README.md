@@ -255,3 +255,6 @@ WARNING: Invalid method: FAIL-Login failed.
 2025-11-30 20:21:40 ACCOUNT FOUND: [http] Host: 192.168.56.101 User: user Password: qwerty [SUCCESS]
 
 
+VALIDAÇÃO DO ACESSO AO FORMULÁRIO COM A CREDENCIAL ENCONTRADA
+
+
