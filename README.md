@@ -335,3 +335,24 @@ Reconnecting with SMB1 for workgroup listing.
         ---------       ------
         
         WORKGROUP       METASPLOITABLE
+
+
+
+        CONCLUSÃO FINAL.
+
+        Esse exercicio demosntra o quõ vuneráveis podemos ficar sem que haja um nivel de maturidade em segurança da informação e seus colaboradores.
+        Medidas de baixo custo, podem ajudar muito ne segurança dos dados conforme abaixo listados:
+
+        Senhas com alto nivel de complexidade.
+
+        Segundo fator de autenticação.
+
+        Controle de sessão de tempo por aplicações.
+
+        Captcha em formulário e portais.
+
+        Constantes atualizações dos serviços e sistemas.
+
+        Manter--se informado sobre novas ameaças.
+
+        Enfim, a segurança da informação tem a ser mais estratégica a cada dia para as organizações.
