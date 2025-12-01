@@ -257,4 +257,8 @@ WARNING: Invalid method: FAIL-Login failed.
 
 VALIDAÇÃO DO ACESSO AO FORMULÁRIO COM A CREDENCIAL ENCONTRADA
 
+Após testes de brute force, o acesso ao formulario foi autenticado com sucesso.
+
+O endereço 192.168.56.101/dvwa/index.php foi exibido.
+
 
